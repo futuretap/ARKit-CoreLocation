@@ -507,6 +507,10 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
             print("camera did change tracking state: limited, relocalizing")
         }
     }
+    
+    public func sessionShouldAttemptRelocalization(_ session: ARSession) -> Bool {
+        return true
+    }
 }
 
 // MARK: - LocationManager
